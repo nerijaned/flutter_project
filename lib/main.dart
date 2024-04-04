@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project/screens/my_home_page.dart';
+import 'package:flutter_project/screens/settings.dart';
+import 'package:flutter_project/screens/profile.dart';
 
 void main() {
   runApp(const MainApp());
@@ -21,6 +23,10 @@ class _MainAppState extends State<MainApp> {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
-    );
+      initialRoute: '/',
+      routes: {
+        '/settings' : (context) => Settings(),
+        '/profile' : (context) => Profile(),
+      });
   }
 }
